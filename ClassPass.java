@@ -18,7 +18,9 @@ public class ClassPass {
         totalGrade = (0 < turk && turk < 100) ? (totalGrade + turk) : totalGrade;
         totalGrade = (0 < chem && chem < 100) ? (totalGrade + chem) : totalGrade;
         totalGrade = (0 < music && music < 100) ? (totalGrade + music) : totalGrade;
-        System.out.println("Your average grade is: " + totalGrade / 5);
+        double averageGrade = totalGrade / 5;
+        String str = (averageGrade < 55) ? "failed" : "passed";
+        System.out.println("Your average grade is: " + averageGrade + "." + " You " + str + " class.");
 
     }
 }
